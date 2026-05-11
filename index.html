@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dagrones</title>
+        <link rel="stylesheet" href="styledragon.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <section id="selecionar-dragon">
+            <h1 class="titulo">!!!!!!!...Drakowar...!!!!!!!</h1>
+            <h2 class="subtitulo"> Choose Your Dragon:</h2>
+
+            <div id="contendorTarjetas" class="tarjetas">
+                
+            </div>
+            
+            
+            <button id="boton-dragon">Select</buttton>
+        </section>
+        
+        <section id="ver-mapa">
+            <!--<h1 class="titulo">Recorre el mapa</h1>-->
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMovimiento()"
+                    ontouchend ="detenerMovimiento()"
+                    onmousedown="moverArriba()"
+                    ontouchstart="moverArriba()">⬆️</button>
+            <div id="botonesCanva">
+            <button onmouseup="detenerMovimiento()"
+                    ontouchend="detenerMovimiento()"
+                    onmousedown="moverIzquierda()"
+                    ontouchstart ="moverIzquierda()">⬅️</button> 
+            <button onmouseup="detenerMovimiento()"
+                    ontouchend="detenerMovimiento()"
+                    onmousedown="moverAbajo()"
+                    ontouchstart="moverAbajo()">⬇️</button>
+            <button onmouseup="detenerMovimiento()" 
+                    ontouchend="detenerMovimiento()"
+                    onmousedown="moverDerecha()"
+                    ontouchstart="moverDerecha()">➡️</button>
+            </div>
+            
+        </section>
+
+        <section id="seleccionar-ataques">
+            <h3 id="segundo-titulo">War the Drags </h3>
+            <h4 id="segundo-subtitulo"> Choose your Attak:</h4>
+             <div id="contenedorBotonesAtaques" class="botones-de-ataque">
+                
+             </div>
+        
+             
+             <div id="ataques">
+             
+                <span id="victorias-jugador">0</span>
+                <span id="victorias-enemigo">0</span>
+                <div id="dragon-jugador"></div>
+                <div id="dragon-enemigo"></div> 
+                <P id="ataque-drago-jugador"></P>
+                <P id="ataque-drago-enemigo"></P>
+             </div>
+
+             <section id="mensajes">
+                <p id="resultado"></p>
+              <div id="reiniciar">
+                  <button id="boton-reiniciar">Restar</button>
+              </div>  
+         </section>
+        </section>
+        
+        
+        <script src="dragones.js"></script>    
+     </body>
+</html>

@@ -1,0 +1,287 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
+
+body{
+  color:white;
+  background: linear-gradient(to left, #0f0524, #0c2281, #000033);
+  font-family: "Smooch Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+
+}
+
+#selecionar-dragon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+.titulo{
+    font-size: 40px;
+    color:white;
+    
+}
+.subtitulo{
+    font-size: 30px;
+    color:white;
+   
+}
+.tarjetas{
+    display: flex;
+    gap:15px ;
+   
+}
+
+.tarjetas-de-dragones{
+    font-size: 22px;
+    border-radius: 20px;
+    border: 5px solid white;
+    padding: 10px;
+    background: rgba(60, 11, 150, 0.6);
+    width: 140px;
+    height: 100px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.tarjetas-de-dragones:hover {
+    animation-name: interaccion;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+}
+@keyframes interaccion{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1.5);}
+}
+.tarjetas-de-dragones img{
+    width: 100px;
+    
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+
+input{
+    display:none;
+    transition: transform 0.3s linear;
+}
+
+input:checked + label{
+   background: rgba(50, 2, 154, 0.6);
+    transform: scale(1.3);
+}
+
+
+#boton-dragon{
+        font-size: 32px;
+        font-family: "Smooch Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        color:white ;
+        display: flex;
+        width:245px;
+        height:63px;
+        background-color:transparent;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        margin-top:125px;
+        border: 2px solid white;
+        border-radius: 30px;
+    }
+
+#dragon-jugador img{
+    margin-left: -400px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+#dragon-enemigo img{
+    width: 200px;
+    margin-left: 154px;
+    border-radius: 20px;
+}
+
+#seleccionar-ataques{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}  
+
+#segundo-titulo{
+    margin-top: 10px;
+    font-size: 57px;
+    color:white;
+    font-style: italic;
+}
+
+#segundo-subtitulo{
+  font-size: 35px;
+  color: white;
+  margin-top: -33px;
+  font-style: italic;
+}
+#mensajes{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top:20px;
+    border-radius:20px;
+    border: 1px solid #fff;
+    background: rgba(50, 2, 154, 0.6);
+    color:#fff;
+    height: 100px;
+    width: 300px;
+    font-size: 22px;
+}
+
+#resultado{
+    margin-bottom: 21px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones-de-ataque{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.botones-de-ataques{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 60px;
+    border-radius: 79px;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 15px;
+    color:white;
+    font-size: 22px;
+    background: rgba(15, 5, 36, 0.6);
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+}
+
+#boton-reiniciar{
+    background-color: transparent;
+    border-radius: 10px;
+    width: 130px;
+    height: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa{
+    border-radius: 20px;
+    
+}
+ 
+#botonesCanva{
+    display: flex;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 130px;
+    height: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#ver-mapa button{
+    background-color: transparent;
+    border-radius: 10px;
+    width: 130px;
+    height: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+@media (max-width: 560px){
+    .tarjetas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #seleccionar-ataques{
+        display: flex;
+        flex-direction: column;
+    }
+    .botones-de-ataque{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 360px){
+    #ver-mapa div{
+        display: flex;
+        align-items: center;
+    }
+    
+    #mapa{
+    border-radius: 20px;
+    width: 290px;
+    height: 560px;
+    
+}
+#botonesCanva{
+    display: flex;
+}
+}
+/* En tu styledragon.css */
+.tarjetas-de-dragones img {
+    max-width: 100%;
+    height: auto;
+}
+
+#dragon-jugador img, 
+#dragon-enemigo img {
+    max-width: 100px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #dragon-jugador img, 
+    #dragon-enemigo img {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    #dragon-jugador img, 
+    #dragon-enemigo img {
+        max-width: 60px;
+    }
+}
